@@ -9,6 +9,7 @@ int main()
 
         l=0;
         m=1;
+        //Include boundary test. What if the input is negative?
         if(i==0)
         {
             k=0;
