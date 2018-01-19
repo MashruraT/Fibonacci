@@ -1,36 +1,30 @@
-//Corrected variable names
+//Used recursion instead of loop
 
 #include<stdio.h>
+
+int fibonacci(int num)
+{
+    if(num==0)
+        return 0;
+    else if(num==1)
+        return 1;
+    else
+        return fibonacci(num-1)+fibonacci(num-2);
+}
+
 int main()
 {
-    int n,cnt,result,prev1,prev2;
+    int n,result;
     while(1)
     {
         printf("Enter a positive number: ");
         scanf("%d",&n);
 
-        prev1=0;
-        prev2=1;
 
-        if(n==0)
-        {
-            result=0;
-        }
-        else if(n==1)
-        {
-            result=1;
-        }
-        else
-        {
-            for(cnt=2;cnt<=n;cnt++)
-            {
-                result=prev1+prev2;
-                prev1=prev2;
-                prev2=result;
-            }
-        }
+        result=fibonacci(n);        //Calling recursive function
         printf("Output = %d\n",result);
-
     }
+
+
     return 0;
 }
