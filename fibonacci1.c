@@ -20,7 +20,7 @@ int main()
         printf("Enter a positive number: ");
         scanf("%d",&n);
 
-
+        //The input has to be verified. It has to be positive
         result=fibonacci(n);        //Calling recursive function
         printf("Output = %d\n",result);
     }
