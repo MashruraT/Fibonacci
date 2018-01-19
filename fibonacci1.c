@@ -1,33 +1,35 @@
+//Corrected variable names
+
 #include<stdio.h>
 int main()
 {
-    int i,j,k,l,m;
+    int n,cnt,result,prev1,prev2;
     while(1)
     {
         printf("Enter a positive number: ");
-        scanf("%d",&i);
+        scanf("%d",&n);
 
-        l=0;
-        m=1;
+        prev1=0;
+        prev2=1;
 
-        if(i==0)
+        if(n==0)
         {
-            k=0;
+            result=0;
         }
-        else if(i==1)
+        else if(n==1)
         {
-            k=1;
+            result=1;
         }
         else
         {
-            for(j=2;j<=i;j++)
+            for(cnt=2;cnt<=n;cnt++)
             {
-                k=l+m;
-                l=m;
-                m=k;
+                result=prev1+prev2;
+                prev1=prev2;
+                prev2=result;
             }
         }
-        printf("Output = %d\n",k);
+        printf("Output = %d\n",result);
 
     }
     return 0;
