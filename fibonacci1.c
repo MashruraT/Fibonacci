@@ -22,6 +22,7 @@ int main()
         }
         else
         {
+            //Recursion is better way to calculate Fibonacci numbers
             for(cnt=2;cnt<=n;cnt++)
             {
                 result=prev1+prev2;
